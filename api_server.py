@@ -9,6 +9,9 @@ GOOGLE_NEWS_API_KEY = "din_google_news_api_key"
 
 # Initiera Flask-app
 app = Flask(__name__)
+@app.route('/')
+def home():
+    return "Welcome to the AI Trends API! Use /api/trends to fetch AI trends.", 200
 
 # Konfigurera logging för att felsöka problem
 logging.basicConfig(level=logging.INFO)
